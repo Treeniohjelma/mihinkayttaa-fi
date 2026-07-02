@@ -1098,7 +1098,7 @@ details p {
 
 .guide-intro {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 360px;
+  grid-template-columns: minmax(0, 1fr);
   gap: 22px;
 }
 
