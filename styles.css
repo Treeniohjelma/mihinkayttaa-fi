@@ -872,10 +872,11 @@ details p {
 
 .hub-article {
   max-width: 1040px;
+  padding-top: 14px;
 }
 
 .article-header {
-  padding: 48px 0 40px;
+  padding: 28px 0 36px;
 }
 
 .article-header h1 {
@@ -884,6 +885,7 @@ details p {
 
 .hub-header {
   max-width: 860px;
+  padding-top: 14px;
   padding-bottom: 26px;
 }
 
@@ -1337,15 +1339,20 @@ summary + p {
   }
 
   .article {
-    padding-top: 34px;
+    padding-top: 24px;
     padding-bottom: 42px;
   }
 
   .article-header {
-    padding: 20px 0 24px;
+    padding: 10px 0 22px;
+  }
+
+  .hub-article {
+    padding-top: 8px;
   }
 
   .hub-header {
+    padding-top: 8px;
     padding-bottom: 18px;
   }
 
@@ -1504,17 +1511,21 @@ summary + p {
 
   .site-header {
     padding-top: 14px;
-    padding-bottom: 18px;
+    padding-bottom: 10px;
   }
 
   .article {
-    padding-top: 24px;
+    padding-top: 16px;
     padding-bottom: 34px;
   }
 
   .article-header {
-    padding-top: 10px;
+    padding-top: 4px;
     padding-bottom: 18px;
+  }
+
+  .hub-article {
+    padding-top: 6px;
   }
 
   .content-section {
