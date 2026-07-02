@@ -431,7 +431,7 @@ h3 {
 .ranked-item {
   position: relative;
   display: grid;
-  grid-template-columns: 44px minmax(160px, 0.75fr) minmax(280px, 1.35fr) minmax(116px, 0.42fr) minmax(132px, 0.42fr);
+  grid-template-columns: 44px minmax(160px, 0.72fr) minmax(280px, 1.35fr) minmax(112px, 0.38fr) minmax(156px, 0.5fr);
   align-items: center;
   gap: 22px;
   min-height: 178px;
@@ -586,6 +586,7 @@ h3 {
   color: #fff;
   font-size: 14px;
   font-weight: 900;
+  line-height: 1.15;
   text-align: center;
   text-decoration: none;
 }
@@ -593,6 +594,11 @@ h3 {
 .rank-cta.disabled {
   background: var(--soft);
   color: var(--muted);
+}
+
+.hub-ranking {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .intro-band {
