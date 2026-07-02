@@ -760,6 +760,213 @@ details p {
   text-decoration: none;
 }
 
+.filter-pills,
+.pill-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-pills {
+  margin: 24px 0 0;
+}
+
+.filter-pills a,
+.pill-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 8px 13px;
+  border: 1px solid rgba(15, 138, 109, 0.22);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--accent-dark);
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: background 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+.filter-pills a:hover,
+.pill-nav a:hover {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
+
+.guide-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 22px;
+}
+
+.guide-card,
+.trust-box,
+.check-card,
+.warning-box,
+.cta-panel,
+.summary-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 12px 34px rgba(22, 32, 42, 0.07);
+}
+
+.guide-card {
+  padding: 30px;
+}
+
+.guide-card .pill-nav {
+  margin-top: 22px;
+}
+
+.trust-box,
+.check-card,
+.warning-box {
+  padding: 24px;
+}
+
+.trust-box {
+  align-self: stretch;
+  border-color: rgba(15, 138, 109, 0.2);
+  background: linear-gradient(180deg, #f4fbf7 0%, #ffffff 100%);
+}
+
+.trust-box h3,
+.check-card h3,
+.warning-box h3 {
+  font-size: 22px;
+}
+
+.criteria-grid,
+.benefit-grid,
+.choice-grid,
+.mini-card-grid,
+.method-grid,
+.two-col-cards {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.criteria-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.benefit-grid,
+.choice-grid,
+.mini-card-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.method-grid,
+.two-col-cards {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.criteria-grid div,
+.benefit-grid div,
+.choice-grid div,
+.mini-card-grid div,
+.method-grid div,
+.two-col-cards div {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 8px 22px rgba(22, 32, 42, 0.05);
+}
+
+.criteria-grid span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 12px;
+  border-radius: 999px;
+  background: var(--mint);
+  color: var(--accent-dark);
+  font-weight: 900;
+}
+
+.criteria-grid h3,
+.benefit-grid h3,
+.choice-grid h3,
+.mini-card-grid h3,
+.method-grid h3,
+.two-col-cards h3 {
+  font-size: 20px;
+}
+
+.benefit-grid small {
+  display: block;
+  margin-top: 12px;
+  color: var(--accent-dark);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.compact-highlight {
+  margin-top: 26px;
+}
+
+.stepper-list {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+.stepper-list li {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.check-card {
+  margin-top: 24px;
+  background: #f6fbf7;
+}
+
+.warning-box {
+  margin-top: 24px;
+  border-color: rgba(223, 121, 95, 0.32);
+  background: #fff7f3;
+}
+
+.warning-box ul {
+  display: grid;
+  gap: 10px;
+  margin: 16px 0 0;
+  padding-left: 20px;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.cta-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  align-items: center;
+  gap: 24px;
+  margin-top: 26px;
+  background: linear-gradient(135deg, #e9f8ef 0%, #ffffff 100%);
+}
+
+.summary-card {
+  display: grid;
+  gap: 12px;
+  padding: 22px;
+  background: #fff;
+}
+
+.summary-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
 .hub-section {
   padding-top: 44px;
   padding-bottom: 44px;
@@ -947,7 +1154,9 @@ summary + p {
   .finder-top,
   .finder-search,
   .split-heading,
-  .about-section {
+  .about-section,
+  .guide-intro,
+  .cta-panel {
     align-items: flex-start;
     flex-direction: column;
     grid-template-columns: 1fr;
@@ -987,6 +1196,13 @@ summary + p {
     justify-self: start;
   }
 
+  .criteria-grid,
+  .benefit-grid,
+  .choice-grid,
+  .mini-card-grid,
+  .method-grid,
+  .two-col-cards,
+  .stepper-list,
   .info-grid {
     grid-template-columns: 1fr;
   }
@@ -997,6 +1213,20 @@ summary + p {
 
   .highlight .button {
     width: 100%;
+  }
+
+  .pill-nav,
+  .filter-pills {
+    flex-wrap: nowrap;
+    margin-left: -4px;
+    padding: 0 4px 8px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+
+  .pill-nav a,
+  .filter-pills a {
+    flex: 0 0 auto;
   }
 }
 
