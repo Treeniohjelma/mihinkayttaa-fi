@@ -210,6 +210,13 @@ h3 {
   font-weight: 800;
 }
 
+.hero-note {
+  max-width: 620px;
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
 .home-hero {
   position: relative;
 }
@@ -516,6 +523,13 @@ h3 {
   line-height: 1.28;
 }
 
+.rank-details p {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
 .rank-details ul {
   display: grid;
   gap: 6px;
@@ -673,6 +687,15 @@ details p {
 .guide-card.priority {
   border-color: rgba(15, 138, 109, 0.26);
   background: linear-gradient(180deg, #ffffff, #f6fbf8);
+}
+
+.guide-card.muted-card {
+  background: #f8faf8;
+  color: var(--muted);
+}
+
+.compact-guides .guide-card {
+  min-height: 230px;
 }
 
 .card-badge {
