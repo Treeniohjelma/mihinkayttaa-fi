@@ -405,12 +405,194 @@ h3 {
 }
 
 .intro-band,
+.ranking-section,
 .content-section,
 .guides,
 .article {
   max-width: 1180px;
   margin: 0 auto;
   padding: 64px 24px;
+}
+
+.ranking-section {
+  padding-top: 26px;
+  padding-bottom: 54px;
+}
+
+.ranked-list {
+  display: grid;
+  gap: 22px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: ranked-items;
+}
+
+.ranked-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 44px minmax(160px, 0.75fr) minmax(280px, 1.35fr) minmax(116px, 0.42fr) minmax(132px, 0.42fr);
+  align-items: center;
+  gap: 22px;
+  min-height: 178px;
+  padding: 26px;
+  border: 1px solid rgba(20, 32, 37, 0.08);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 18px 42px rgba(20, 32, 37, 0.08);
+}
+
+.ranked-item::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  bottom: 22px;
+  left: calc(44px + 26px + 22px + 20%);
+  width: 1px;
+  background: var(--line);
+}
+
+.ranked-item.featured {
+  border-color: rgba(15, 138, 109, 0.2);
+  background:
+    linear-gradient(90deg, rgba(223, 243, 234, 0.38), rgba(255, 255, 255, 0.92) 42%),
+    #fff;
+}
+
+.ranked-item.placeholder {
+  opacity: 0.78;
+}
+
+.rank-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--accent-dark);
+  font-size: 20px;
+  font-weight: 900;
+  box-shadow: 0 6px 16px rgba(20, 32, 37, 0.06);
+}
+
+.rank-brand {
+  display: grid;
+  gap: 8px;
+}
+
+.rank-brand strong {
+  color: var(--ink);
+  font-size: 24px;
+  line-height: 1.1;
+}
+
+.rank-brand small {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.rank-badge {
+  justify-self: start;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--cream);
+  color: #7b5a0c;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.rank-badge.muted {
+  background: var(--soft);
+  color: var(--muted);
+}
+
+.rank-details h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 1.28;
+}
+
+.rank-details ul {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rank-details li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.rank-details li::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  background: #fff;
+}
+
+.rank-score {
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  text-align: center;
+}
+
+.rank-score strong {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 64px;
+  min-height: 44px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.rank-score span {
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.rank-score.empty strong {
+  background: var(--soft);
+  color: var(--muted);
+}
+
+.rank-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: var(--coral);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 900;
+  text-align: center;
+  text-decoration: none;
+}
+
+.rank-cta.disabled {
+  background: var(--soft);
+  color: var(--muted);
 }
 
 .intro-band {
@@ -433,6 +615,13 @@ details p {
   margin: 0;
   color: var(--muted);
   font-size: 18px;
+}
+
+.section-kicker {
+  margin: -4px 0 14px;
+  color: var(--accent-dark);
+  font-size: 18px;
+  font-weight: 900;
 }
 
 .text-link {
@@ -767,6 +956,31 @@ summary + p {
     grid-template-columns: 1fr;
   }
 
+  .ranked-item {
+    grid-template-columns: 44px minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .ranked-item::before {
+    display: none;
+  }
+
+  .rank-brand,
+  .rank-details,
+  .rank-score,
+  .rank-cta {
+    grid-column: 2;
+  }
+
+  .rank-score {
+    justify-items: start;
+    text-align: left;
+  }
+
+  .rank-cta {
+    justify-self: start;
+  }
+
   .info-grid {
     grid-template-columns: 1fr;
   }
@@ -784,6 +998,7 @@ summary + p {
   .site-header,
   .hero,
   .intro-band,
+  .ranking-section,
   .content-section,
   .guides,
   .article,
