@@ -681,6 +681,17 @@ details p {
   font-size: 17px;
 }
 
+.stacked-heading {
+  max-width: 760px;
+}
+
+.stacked-heading p {
+  max-width: 720px;
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 17px;
+}
+
 .guide-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1360,6 +1371,10 @@ summary + p {
 
   .section-heading {
     margin-bottom: 18px;
+  }
+
+  .stacked-heading p {
+    margin-top: 8px;
   }
 
   .split-heading > p {
