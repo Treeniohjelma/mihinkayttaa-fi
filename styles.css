@@ -502,6 +502,66 @@ h3 {
   gap: 8px;
 }
 
+.rank-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(15, 138, 109, 0.18);
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--accent), #72c8a6);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1;
+  box-shadow: 0 8px 18px rgba(20, 32, 37, 0.08);
+}
+
+.icon-treeniohjelma {
+  border-color: rgba(235, 185, 74, 0.36);
+  background: linear-gradient(135deg, #f2d47d, #d4a93f);
+  color: #fff;
+  font-size: 21px;
+}
+
+.icon-open-padel,
+.icon-padel-tampere {
+  background: linear-gradient(135deg, #1d9a79, #76d3b1);
+}
+
+.icon-superpark,
+.icon-flamingo {
+  background: linear-gradient(135deg, #df795f, #f3b28d);
+}
+
+.icon-ruka,
+.icon-himos {
+  background: linear-gradient(135deg, #4b8ca8, #b8dce7);
+}
+
+.icon-finnkino,
+.icon-museokortti,
+.icon-lippu,
+.icon-tiketti {
+  background: linear-gradient(135deg, #172b3a, #506b7b);
+}
+
+.icon-fressi,
+.icon-liikku,
+.icon-fitness24seven,
+.icon-elixia,
+.icon-urheiluhallit {
+  background: linear-gradient(135deg, #0f8a6d, #43b887);
+}
+
+.icon-rela,
+.icon-suhk,
+.icon-terveystalo,
+.icon-mehilainen {
+  background: linear-gradient(135deg, #5f7380, #9bb2bd);
+}
+
 .rank-brand strong {
   color: var(--ink);
   font-size: 24px;
@@ -815,6 +875,19 @@ details p {
 
 .filter-pills {
   margin: 24px 0 0;
+}
+
+.ranking-section .filter-pills {
+  margin-top: 24px;
+}
+
+.ranking-section .answer-box {
+  margin-top: 18px;
+}
+
+.ranking-section .toc {
+  margin-top: 16px;
+  margin-bottom: 0;
 }
 
 .filter-pills a,
