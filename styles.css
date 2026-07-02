@@ -562,6 +562,55 @@ h3 {
   background: linear-gradient(135deg, #5f7380, #9bb2bd);
 }
 
+.rank-logo {
+  width: 64px;
+  height: 44px;
+  padding: 7px;
+  border-color: rgba(20, 32, 37, 0.08);
+  background: #fff;
+  color: transparent;
+  font-size: 0;
+  overflow: hidden;
+}
+
+.rank-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.rank-logo.icon-treeniohjelma,
+.rank-logo.icon-finnkino,
+.rank-logo.icon-museokortti,
+.rank-logo.icon-ruka {
+  width: 44px;
+  padding: 5px;
+}
+
+.rank-logo.icon-treeniohjelma {
+  background: #e2b94a;
+}
+
+.rank-logo.icon-open-padel,
+.rank-logo.icon-flamingo,
+.rank-logo.icon-tiketti,
+.rank-logo.icon-terveystalo,
+.rank-logo.icon-urheiluhallit {
+  width: 78px;
+}
+
+.rank-logo.icon-fitness24seven,
+.rank-logo.icon-padel-tampere,
+.rank-logo.icon-lippu {
+  background: #092c42;
+}
+
+.rank-logo.icon-lippu,
+.rank-logo.icon-suhk {
+  padding: 8px;
+}
+
 .rank-brand strong {
   color: var(--ink);
   font-size: 24px;
