@@ -6,7 +6,7 @@
     <title>Tietoa sivustosta | Mihin käyttää</title>
     <meta name="description" content="Tietoa Mihin käyttää -sivustosta, toimituksellisesta linjasta ja siitä, miten vertailut rakennetaan käyttäjän päätöksenteon tueksi.">
     <link rel="canonical" href="https://mihinkayttaa.fi/tietoa/">
-    <link rel="stylesheet" href="/styles.css?v=trust-width-20260703">
+    <link rel="stylesheet" href="/styles.css?v=contact-form-20260703">
     <link rel="icon" type="image/png" href="/assets/brand/favicon-512.png">
     <link rel="apple-touch-icon" href="/assets/brand/favicon-512.png">
     <meta property="og:title" content="Tietoa Mihin käyttää -sivustosta">
@@ -71,6 +71,38 @@
             </ul>
           </div>
         </section>
+
+        <section class="content-section hub-section contact-section" id="yhteydenotto">
+          <div class="section-heading stacked-heading">
+            <h2>Yhteydenotto</h2>
+            <p>Voit lähettää meille viestin tällä lomakkeella. Sähköpostiosoitetta ei näytetä sivustolla, jotta vältämme turhaa roskapostia.</p>
+          </div>
+
+          <form class="contact-form" action="/api/contact" method="post">
+            <div class="form-row">
+              <label for="contact-name">Nimi</label>
+              <input id="contact-name" name="name" type="text" autocomplete="name" maxlength="120" required>
+            </div>
+            <div class="form-row">
+              <label for="contact-email">Sähköposti</label>
+              <input id="contact-email" name="email" type="email" autocomplete="email" maxlength="160" required>
+            </div>
+            <div class="form-row">
+              <label for="contact-subject">Aihe</label>
+              <input id="contact-subject" name="subject" type="text" maxlength="160" required>
+            </div>
+            <div class="form-row">
+              <label for="contact-message">Viesti</label>
+              <textarea id="contact-message" name="message" rows="7" maxlength="3000" required></textarea>
+            </div>
+            <div class="form-row contact-trap" aria-hidden="true">
+              <label for="contact-website">Verkkosivu</label>
+              <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <button class="button primary" type="submit">Lähetä viesti</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </section>
       </article>
     </main>
 
@@ -86,7 +118,38 @@
         <a href="/smartum/">Smartum</a>
         <a href="/edenred/">Edenred</a>
         <a aria-current="page" href="/tietoa/">Tietoa sivustosta</a>
+        <a href="/tietoa/#yhteydenotto">Yhteydenotto</a>
       </nav>
     </footer>
+    <script>
+      const contactForm = document.querySelector(".contact-form");
+      if (contactForm) {
+        contactForm.addEventListener("submit", async (event) => {
+          event.preventDefault();
+          const status = contactForm.querySelector(".form-status");
+          const button = contactForm.querySelector("button[type='submit']");
+          status.textContent = "Lähetetään viestiä...";
+          button.disabled = true;
+
+          try {
+            const response = await fetch(contactForm.action, {
+              method: "POST",
+              body: new FormData(contactForm),
+              headers: { "Accept": "application/json" }
+            });
+            const result = await response.json().catch(() => ({}));
+            if (!response.ok) {
+              throw new Error(result.error || "Viestin lähetys epäonnistui.");
+            }
+            contactForm.reset();
+            status.textContent = "Kiitos viestistä. Palaamme asiaan mahdollisimman pian.";
+          } catch (error) {
+            status.textContent = error.message || "Viestin lähetys epäonnistui. Yritä hetken kuluttua uudelleen.";
+          } finally {
+            button.disabled = false;
+          }
+        });
+      }
+    </script>
   </body>
 </html>
