@@ -293,7 +293,7 @@ h3 {
 }
 
 .selection-guide .finder-card {
-  max-width: 760px;
+  max-width: 100%;
 }
 
 .finder-top,
@@ -779,7 +779,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
+  gap: 10px 12px;
   margin: 18px 0 24px;
   color: var(--accent-dark);
   font-size: 14px;
@@ -797,11 +797,20 @@ h3 {
 }
 
 .ranking-trust-row span:first-child {
-  max-width: 620px;
-  border-color: var(--line);
-  background: #fff;
+  display: block;
+  flex-basis: 100%;
+  max-width: 760px;
+  min-height: 0;
+  padding: 0 0 0 14px;
+  border: 0;
+  border-left: 3px solid var(--accent);
+  border-radius: 0;
+  background: transparent;
   color: var(--muted);
-  font-weight: 700;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.55;
 }
 
 .editorial-trust-card,
