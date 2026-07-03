@@ -1768,3 +1768,9 @@ summary + p {
     bottom: 44px;
   }
 }
+
+.article > .ranking-section,
+.article > .content-section {
+  padding-left: 0;
+  padding-right: 0;
+}
