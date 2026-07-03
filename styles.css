@@ -825,6 +825,14 @@ h3 {
   box-shadow: 0 12px 34px rgba(16, 35, 27, 0.06);
 }
 
+main > .editorial-trust-card,
+main > .prepay-check-card {
+  width: calc(100% - 48px);
+  max-width: 1180px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .editorial-trust-card {
   grid-template-columns: minmax(0, 1fr) minmax(260px, 0.56fr);
   background: linear-gradient(135deg, #ffffff 0%, var(--info) 100%);
