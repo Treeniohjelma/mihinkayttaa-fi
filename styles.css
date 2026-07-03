@@ -1015,8 +1015,13 @@ details p {
 }
 
 .service-review-content {
-  display: grid;
-  gap: 18px;
+  display: contents;
+}
+
+.service-review-content > h3,
+.service-meta,
+.service-review-copy {
+  grid-column: 1;
 }
 
 .service-review-card h3 {
@@ -1056,6 +1061,7 @@ details p {
 }
 
 .service-fit-box {
+  grid-column: 1 / -1;
   padding: 18px;
   border: 1px solid rgba(21, 122, 79, 0.15);
   border-radius: 8px;
@@ -1080,6 +1086,7 @@ details p {
 }
 
 .pros-cons-grid {
+  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
@@ -1101,10 +1108,13 @@ details p {
 }
 
 .service-cta {
+  grid-column: 1 / -1;
   justify-self: start;
 }
 
 .service-preview {
+  grid-column: 2;
+  grid-row: 1 / span 3;
   position: sticky;
   top: 18px;
   margin: 0;
@@ -1702,7 +1712,18 @@ summary + p {
     grid-template-columns: 1fr;
   }
 
+  .service-review-content > h3,
+  .service-meta,
+  .service-review-copy,
+  .service-fit-box,
+  .pros-cons-grid,
+  .service-cta,
   .service-preview {
+    grid-column: 1;
+  }
+
+  .service-preview {
+    grid-row: auto;
     position: static;
     order: -1;
   }
