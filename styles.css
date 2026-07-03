@@ -996,6 +996,133 @@ details p {
   font-weight: 800;
 }
 
+.service-review-list {
+  display: grid;
+  gap: 26px;
+  margin-top: 28px;
+}
+
+.service-review-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.75fr);
+  gap: 28px;
+  align-items: start;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 14px 34px rgba(16, 35, 27, 0.07);
+}
+
+.service-review-content {
+  display: grid;
+  gap: 18px;
+}
+
+.service-review-card h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(25px, 3vw, 34px);
+}
+
+.service-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.service-meta span,
+.service-fit-box strong {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 7px 10px;
+  border: 1px solid rgba(21, 122, 79, 0.16);
+  border-radius: 999px;
+  background: var(--mint);
+  color: var(--accent-dark);
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.service-review-copy {
+  display: grid;
+  gap: 12px;
+}
+
+.service-review-copy p {
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.service-fit-box {
+  padding: 18px;
+  border: 1px solid rgba(21, 122, 79, 0.15);
+  border-radius: 8px;
+  background: rgba(230, 244, 236, 0.52);
+}
+
+.service-fit-box strong {
+  margin-bottom: 12px;
+  background: #fff;
+}
+
+.service-fit-box ul,
+.pros-cons-grid ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.service-fit-box li,
+.pros-cons-grid li {
+  margin: 7px 0;
+}
+
+.pros-cons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.pros-cons-grid > div {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.pros-cons-grid strong {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 850;
+}
+
+.service-cta {
+  justify-self: start;
+}
+
+.service-preview {
+  position: sticky;
+  top: 18px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 16px 38px rgba(16, 35, 27, 0.1);
+}
+
+.service-preview img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10.5;
+  object-fit: cover;
+  object-position: center;
+}
+
 .about-section {
   display: grid;
   grid-template-columns: minmax(260px, 0.7fr) minmax(0, 1fr);
@@ -1571,6 +1698,19 @@ summary + p {
     grid-template-columns: 1fr;
   }
 
+  .service-review-card {
+    grid-template-columns: 1fr;
+  }
+
+  .service-preview {
+    position: static;
+    order: -1;
+  }
+
+  .pros-cons-grid {
+    grid-template-columns: 1fr;
+  }
+
   .editorial-trust-card,
   .prepay-check-card {
     grid-template-columns: 1fr;
@@ -1737,6 +1877,19 @@ summary + p {
     min-height: 0;
     padding: 22px;
     overflow: hidden;
+  }
+
+  .service-review-card {
+    gap: 18px;
+    padding: 18px;
+  }
+
+  .service-review-copy p {
+    font-size: 16px;
+  }
+
+  .service-preview img {
+    aspect-ratio: 16 / 9;
   }
 
   .ranking-section {
