@@ -1600,6 +1600,11 @@ summary + p {
   font-weight: 700;
 }
 
+.footer-contact {
+  color: var(--text);
+  font-weight: 800;
+}
+
 .contact-section {
   scroll-margin-top: 24px;
 }
