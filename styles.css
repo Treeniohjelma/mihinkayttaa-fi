@@ -692,6 +692,12 @@ h3 {
   line-height: 1.55;
 }
 
+.rank-details .rank-speed {
+  margin-bottom: 10px;
+  color: var(--accent-dark);
+  font-weight: 850;
+}
+
 .rank-details ul {
   display: grid;
   gap: 6px;
@@ -1595,6 +1601,177 @@ summary + p {
   margin: 0 0 10px;
 }
 
+.expiry-page {
+  max-width: 1120px;
+}
+
+.expiry-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.58fr);
+  align-items: center;
+  gap: 34px;
+}
+
+.expiry-illustration {
+  position: relative;
+  min-height: 360px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(rgba(21, 122, 79, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(21, 122, 79, 0.06) 1px, transparent 1px),
+    radial-gradient(circle at 76% 22%, rgba(246, 196, 83, 0.26), transparent 28%),
+    linear-gradient(135deg, #ffffff 0%, var(--mint) 100%);
+  background-size: 46px 46px, 46px 46px, auto, auto;
+  box-shadow: var(--shadow);
+}
+
+.phone-card,
+.calendar-card,
+.check-card-mini {
+  position: absolute;
+  border: 1px solid rgba(21, 122, 79, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 16px 34px rgba(16, 35, 27, 0.1);
+}
+
+.phone-card {
+  top: 48px;
+  left: 34px;
+  width: 210px;
+  padding: 18px;
+}
+
+.phone-card span,
+.calendar-card strong {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.phone-card strong {
+  display: block;
+  margin: 8px 0;
+  font-size: 28px;
+  line-height: 1.06;
+}
+
+.phone-card small {
+  display: block;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.calendar-card {
+  right: 34px;
+  bottom: 54px;
+  width: 150px;
+  padding: 18px;
+  text-align: center;
+}
+
+.calendar-card span {
+  display: block;
+  color: var(--accent);
+  font-size: 62px;
+  font-weight: 900;
+  line-height: 0.95;
+}
+
+.check-card-mini {
+  right: 58px;
+  top: 64px;
+  display: grid;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 42px;
+  font-weight: 900;
+}
+
+.expiry-toc {
+  margin-top: 24px;
+}
+
+.expiry-criteria {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.expiry-criteria > div {
+  min-height: 190px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(20, 32, 37, 0.05);
+}
+
+.expiry-criteria span {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 12px;
+  border-radius: 999px;
+  background: var(--mint);
+  color: var(--accent-dark);
+  font-weight: 900;
+}
+
+.warning-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.expiry-review-list .service-review-card {
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.74fr);
+}
+
+.logo-preview {
+  display: grid;
+  place-items: center;
+  min-height: 260px;
+  padding: 44px;
+}
+
+.logo-preview img {
+  width: min(260px, 78%);
+  height: auto;
+  max-height: 170px;
+  object-fit: contain;
+}
+
+.logo-preview-yellow {
+  background:
+    radial-gradient(circle at 25% 20%, rgba(246, 196, 83, 0.32), transparent 34%),
+    linear-gradient(135deg, #fff 0%, #fff8e8 100%);
+}
+
+.check-mini ul {
+  columns: 2;
+}
+
+.expiry-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 28px;
+}
+
+.page-disclaimer {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 700;
+}
+
 .commercial-disclosure {
   color: var(--accent-dark);
   font-weight: 700;
@@ -1780,6 +1957,28 @@ summary + p {
 
   .service-review-card {
     grid-template-columns: 1fr;
+  }
+
+  .expiry-hero,
+  .expiry-cta {
+    grid-template-columns: 1fr;
+  }
+
+  .expiry-illustration {
+    min-height: 300px;
+  }
+
+  .expiry-review-list .service-review-card {
+    grid-template-columns: 1fr;
+  }
+
+  .expiry-criteria,
+  .warning-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .check-mini ul {
+    columns: 1;
   }
 
   .service-review-content > h3,
