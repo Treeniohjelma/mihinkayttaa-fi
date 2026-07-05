@@ -1965,7 +1965,7 @@ summary + p {
   }
 
   .expiry-illustration {
-    min-height: 300px;
+    display: none;
   }
 
   .expiry-review-list .service-review-card {
