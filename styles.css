@@ -1239,7 +1239,8 @@ details p {
 }
 
 .filter-pills a,
-.pill-nav a {
+.pill-nav a,
+.pill-nav span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2103,6 +2104,7 @@ summary + p {
   }
 
   .pill-nav a,
+  .pill-nav span,
   .filter-pills a {
     min-width: 0;
     white-space: normal;
