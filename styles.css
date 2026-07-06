@@ -572,7 +572,11 @@ h3 {
 .icon-finnkino,
 .icon-museokortti,
 .icon-lippu,
-.icon-tiketti {
+.icon-tiketti,
+.icon-kansallisteatteri,
+.icon-rock-house,
+.icon-arena-center,
+.icon-helsinki-city-run {
   background: linear-gradient(135deg, #172b3a, #506b7b);
 }
 
@@ -587,7 +591,11 @@ h3 {
 .icon-rela,
 .icon-suhk,
 .icon-terveystalo,
-.icon-mehilainen {
+.icon-mehilainen,
+.icon-korkeasaari,
+.icon-kiasma,
+.icon-yogaia,
+.icon-kj-experience {
   background: linear-gradient(135deg, #5f7380, #9bb2bd);
 }
 
@@ -622,7 +630,8 @@ h3 {
 .rank-logo.icon-treeniohjelma,
 .rank-logo.icon-finnkino,
 .rank-logo.icon-museokortti,
-.rank-logo.icon-ruka {
+.rank-logo.icon-ruka,
+.rank-logo.icon-kiasma {
   width: 44px;
   max-width: 44px;
   padding: 5px;
@@ -636,20 +645,35 @@ h3 {
 .rank-logo.icon-flamingo,
 .rank-logo.icon-tiketti,
 .rank-logo.icon-terveystalo,
-.rank-logo.icon-urheiluhallit {
+.rank-logo.icon-urheiluhallit,
+.rank-logo.icon-kansallisteatteri,
+.rank-logo.icon-rock-house,
+.rank-logo.icon-arena-center,
+.rank-logo.icon-helsinki-city-run {
   width: 78px;
   max-width: 78px;
 }
 
 .rank-logo.icon-fitness24seven,
 .rank-logo.icon-padel-tampere,
-.rank-logo.icon-lippu {
+.rank-logo.icon-lippu,
+.rank-logo.icon-arena-center,
+.rank-logo.icon-rock-house {
   background: #092c42;
 }
 
 .rank-logo.icon-lippu,
-.rank-logo.icon-suhk {
+.rank-logo.icon-suhk,
+.rank-logo.icon-helsinki-city-run {
   padding: 8px;
+}
+
+.rank-logo.icon-korkeasaari,
+.rank-logo.icon-kansallisteatteri,
+.rank-logo.icon-yogaia,
+.rank-logo.icon-kj-experience {
+  width: 68px;
+  max-width: 68px;
 }
 
 .rank-brand strong {
