@@ -576,7 +576,8 @@ h3 {
 .icon-kansallisteatteri,
 .icon-rock-house,
 .icon-arena-center,
-.icon-helsinki-city-run {
+.icon-helsinki-city-run,
+.icon-puhti {
   background: linear-gradient(135deg, #172b3a, #506b7b);
 }
 
@@ -649,7 +650,8 @@ h3 {
 .rank-logo.icon-kansallisteatteri,
 .rank-logo.icon-rock-house,
 .rank-logo.icon-arena-center,
-.rank-logo.icon-helsinki-city-run {
+.rank-logo.icon-helsinki-city-run,
+.rank-logo.icon-puhti {
   width: 78px;
   max-width: 78px;
 }
