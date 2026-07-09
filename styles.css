@@ -1545,23 +1545,6 @@ tr:last-child td {
   font-size: 18px;
 }
 
-.affiliate-note {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-  margin: 0 0 14px;
-  padding: 13px 16px;
-  border-left: 3px solid var(--gold);
-  background: rgba(255, 248, 232, 0.7);
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.affiliate-note strong {
-  flex: 0 0 auto;
-  color: var(--ink);
-}
-
 .editorial-section {
   padding-top: 42px;
   padding-bottom: 42px;
@@ -1598,6 +1581,11 @@ tr:last-child td {
   margin: 10px 0 0;
   color: var(--muted);
   font-size: 16px;
+}
+
+.editorial-mid-cta {
+  justify-content: center;
+  margin-top: 28px;
 }
 
 .editorial-list {
@@ -2416,12 +2404,6 @@ summary + p {
 }
 
 @media (max-width: 760px) {
-  .affiliate-note {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 2px;
-  }
-
   .editorial-picks,
   .editorial-list,
   .editorial-choice-grid,
